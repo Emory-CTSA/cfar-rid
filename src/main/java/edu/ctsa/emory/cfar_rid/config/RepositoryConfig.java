@@ -1,7 +1,6 @@
 package edu.ctsa.emory.cfar_rid.config;
 
-import edu.ctsa.emory.cfar_rid.entity.CFARDemographics;
-import edu.ctsa.emory.cfar_rid.entity.CFARReservoirMeasurements;
+import edu.ctsa.emory.cfar_rid.entity.*;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -12,7 +11,7 @@ public class RepositoryConfig implements RepositoryRestConfigurer {
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
-        // This line exposes the ID for the CFARDemographics entity
-        config.exposeIdsFor(CFARDemographics.class, CFARReservoirMeasurements.class);
+        // This line exposes the ID for the entity class
+        config.exposeIdsFor(CFARDemographics.class, CFARReservoirMeasurements.class, CfarArvStartDate.class, CfarArtAll.class, CfarMedsWithDates.class);
     }
 }
