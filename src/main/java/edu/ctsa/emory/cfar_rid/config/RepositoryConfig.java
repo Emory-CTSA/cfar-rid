@@ -12,6 +12,8 @@ public class RepositoryConfig implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         // This line exposes the ID for the entity class
-        config.exposeIdsFor(CFARDemographics.class, CFARReservoirMeasurements.class, CfarArvStartDate.class, CfarArtAll.class, CfarMedsWithDates.class);
+        config.exposeIdsFor(CFARDemographics.class, CFARReservoirMeasurements.class,
+                CfarArvStartDate.class, CfarArtAll.class, CfarMedsWithDates.class,
+                CfarLog10Vl.class, CfarLymphocytesAll.class, CfarAbsCd4Loinc.class);
     }
 }
