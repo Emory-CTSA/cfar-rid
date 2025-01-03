@@ -1,6 +1,5 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
-import edu.ctsa.emory.cfar_rid.embedded.CfarLymphocyteKey;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +12,6 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @Table(name = "cfar_lymphocytes_all", schema = "cfar_rid_hiv")
-//@IdClass(CfarLymphocyteKey.class)
 public class CfarLymphocytesAll {
 
     @Id
