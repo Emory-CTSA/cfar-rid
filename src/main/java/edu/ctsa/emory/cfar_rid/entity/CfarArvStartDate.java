@@ -54,4 +54,12 @@ public class CfarArvStartDate {
 
     @Column(name = "TOTAL_INSTI_TIME")
     private Integer totalInstiTime;
+
+    @Column(name = "ATI_START_DATE")
+    @Temporal(TemporalType.DATE)
+    private Date atiStartDate;
+
+    @Column(name = "ATI_STOP_DATE")
+    @Temporal(TemporalType.DATE)
+    private Date atiStopDate;
 }
