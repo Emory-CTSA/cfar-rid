@@ -14,6 +14,7 @@ public class RepositoryConfig implements RepositoryRestConfigurer {
         // This line exposes the ID for the entity class
         config.exposeIdsFor(CFARDemographics.class, CFARReservoirMeasurements.class,
                 CfarArvStartDate.class, CfarArtAll.class, CfarMedsWithDates.class,
-                CfarLog10Vl.class, CfarLymphocytesAll.class, CfarAbsCd4Loinc.class);
+                CfarLog10Vl.class, CfarLymphocytesAll.class, CfarAbsCd4Loinc.class,
+                CfarCd4Loinc.class, CfarCd4Loinc.class);
     }
 }
