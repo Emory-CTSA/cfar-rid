@@ -15,6 +15,8 @@ public class RepositoryConfig implements RepositoryRestConfigurer {
         config.exposeIdsFor(CFARDemographics.class, CFARReservoirMeasurements.class,
                 CfarArvStartDate.class, CfarArtAll.class, CfarMedsWithDates.class,
                 CfarLog10Vl.class, CfarLymphocytesAll.class, CfarAbsCd4Loinc.class,
-                CfarCd4Loinc.class, CfarCd4Loinc.class);
+                CfarCd4Loinc.class, CfarCd4Loinc.class, CfarCd8Loinc.class,
+                CfarCd4toCd8Loinc.class, CfarHbv.class, CfarHcv.class,
+                CfarCbcChemistry.class, CfarDiagnosis.class);
     }
 }
