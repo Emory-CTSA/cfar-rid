@@ -9,6 +9,8 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "cfar_cd4_loinc", schema = "cfar_rid_hiv")
 public class CfarCd4Loinc {
