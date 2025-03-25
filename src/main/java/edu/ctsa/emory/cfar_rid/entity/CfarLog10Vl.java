@@ -1,6 +1,6 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 import java.util.Date;
 
