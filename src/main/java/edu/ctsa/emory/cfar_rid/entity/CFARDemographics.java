@@ -5,20 +5,23 @@ import lombok.*;
 
 import java.util.Date;
 
+/**
+ * Entity class representing CFAR Demographics data.
+ */
 @Entity
 @Table(name = "cfar_demographics", schema = "cfar_rid_hiv")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@Builder
 public class CFARDemographics {
 
     @Id
-    @Column(name = "study_id")
+    @Column(name = "study_id", nullable = false)
     private String studyId;
 
-    @Column(name = "person_key")
+    @Column(name = "person_key", nullable = false)
     private String personKey;
 
     @Column(name = "site")
@@ -42,8 +45,8 @@ public class CFARDemographics {
     @Column(name = "hiv_positive_date_modifier")
     private Integer hivPositiveDateModifier;
 
-    @Column(name = "hiv_positive_date")
     @Temporal(TemporalType.DATE)
+    @Column(name = "hiv_positive_date")
     private Date hivPositiveDate;
 
     @Column(name = "hiv_positive_year")
@@ -58,8 +61,8 @@ public class CFARDemographics {
     @Column(name = "ethnicity")
     private String ethnicity;
 
-    @Column(name = "first_clinic_visit")
     @Temporal(TemporalType.DATE)
+    @Column(name = "first_clinic_visit")
     private Date firstClinicVisit;
 
     @Column(name = "days_from_hiv_pos_date_to_first_clinic_visit")
