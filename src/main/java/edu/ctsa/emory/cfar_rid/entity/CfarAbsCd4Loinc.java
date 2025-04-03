@@ -6,16 +6,16 @@ import lombok.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "cfar_abs_cd4_loinc", schema = "cfar_rid_hiv")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Table(name = "cfar_abs_cd4_loinc", schema = "cfar_rid_hiv")
-//@IdClass(CfarAbsCd4LoincKey.class)
+@Builder
 public class CfarAbsCd4Loinc {
+
     @Id
-    @Column(name = "STUDY_ID")
+    @Column(name = "STUDY_ID", nullable = false)
     private String studyId;
 
     @Column(name = "PERSON_KEY")
