@@ -7,16 +7,16 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
+@Table(name = "cfar_abs_cd8_loinc", schema = "cfar_rid_hiv")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Table(name = "cfar_abs_cd8_loinc", schema = "cfar_rid_hiv")
+@Builder
 public class CfarAbsCd8Loinc {
 
     @Id
-    @Column(name = "study_id")
+    @Column(name = "study_id", nullable = false)
     private String studyId;
 
     @Column(name = "person_key")
