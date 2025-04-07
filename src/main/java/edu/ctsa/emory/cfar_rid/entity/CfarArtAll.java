@@ -6,16 +6,16 @@ import lombok.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "cfar_art_all", schema = "cfar_rid_hiv")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Table(name = "cfar_art_all", schema = "cfar_rid_hiv")
+@Builder
 public class CfarArtAll {
 
     @Id
-    @Column(name = "STUDY_ID")
+    @Column(name = "STUDY_ID", nullable = false)
     private String studyId;
 
     @Column(name = "PERSON_KEY")
@@ -24,12 +24,12 @@ public class CfarArtAll {
     @Column(name = "DRUG_DESCRIPTION")
     private String drugDescription;
 
-    @Column(name = "START_DATE")
     @Temporal(TemporalType.DATE)
+    @Column(name = "START_DATE")
     private Date startDate;
 
-    @Column(name = "END_DATE")
     @Temporal(TemporalType.DATE)
+    @Column(name = "END_DATE")
     private Date endDate;
 
     @Column(name = "DAYS_FROM_HIV_DX_TO_DRUG_START")
