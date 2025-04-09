@@ -6,13 +6,13 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 @Entity
 @Table(name = "cfar_cd4_loinc", schema = "cfar_rid_hiv")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class CfarCd4Loinc {
 
     @Id
