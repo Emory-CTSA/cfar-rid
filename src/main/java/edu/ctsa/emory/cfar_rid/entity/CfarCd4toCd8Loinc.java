@@ -1,8 +1,8 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
+import javax.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@Builder
 public class CfarCd4toCd8Loinc {
 
     @Id
