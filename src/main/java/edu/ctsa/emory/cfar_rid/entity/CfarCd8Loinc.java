@@ -1,18 +1,19 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
 import javax.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "cfar_cd8_loinc", schema = "cfar_rid_hiv")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class CfarCd8Loinc {
     @Id
     @Column(name = "study_id")

@@ -1,9 +1,9 @@
 package edu.ctsa.emory.cfar_rid.repository;
 
 import edu.ctsa.emory.cfar_rid.entity.CfarCd8Loinc;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(path = "cfar-cd8-loinc")
-public interface CfarCd8LoincRepository extends CrudRepository<CfarCd8Loinc, String> {
+@Repository
+public interface CfarCd8LoincRepository extends JpaRepository<CfarCd8Loinc, String> {
 }
