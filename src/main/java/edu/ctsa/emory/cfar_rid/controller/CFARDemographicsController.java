@@ -22,7 +22,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/api/demographics")
 @Slf4j
-@Tag(name = "CFAR Demographics", description = "Endpoints for managing CFAR Demographics")
+@Tag(name = "Demographics", description = "Endpoints for managing CFAR Demographics")
 public class CFARDemographicsController {
 
     private final CFARDemographicsService service;
