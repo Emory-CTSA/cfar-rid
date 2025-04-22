@@ -1,21 +1,23 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
-import javax.persistence.*;
 import lombok.*;
-
+import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Entity representing CFAR HBV lab data.
+ */
 @Entity
 @Table(name = "cfar_hbv", schema = "cfar_rid_hiv")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@Builder
 public class CfarHbv {
 
     @Id
-    @Column(name = "study_id")
+    @Column(name = "study_id", nullable = false, unique = true)
     private String studyId;
 
     @Column(name = "person_key")
