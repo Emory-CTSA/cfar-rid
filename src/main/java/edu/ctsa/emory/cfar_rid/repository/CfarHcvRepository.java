@@ -1,10 +1,12 @@
 package edu.ctsa.emory.cfar_rid.repository;
 
-import edu.ctsa.emory.cfar_rid.entity.CfarAbsCd8Loinc;
 import edu.ctsa.emory.cfar_rid.entity.CfarHcv;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(path = "cfar-hcv")
-public interface CfarHcvRepository extends CrudRepository<CfarHcv, String> {
+/**
+ * Repository interface for managing CFAR HCV entity persistence.
+ */
+@Repository
+public interface CfarHcvRepository extends JpaRepository<CfarHcv, String> {
 }

@@ -5,17 +5,21 @@ import lombok.*;
 
 import java.util.Date;
 
+/**
+ * Entity representing Hepatitis C Virus (HCV) lab data from CFAR.
+ */
 @Entity
 @Table(name = "cfar_hcv", schema = "cfar_rid_hiv")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ToString
 public class CfarHcv {
 
     @Id
-    @Column(name = "study_id")
+    @Column(name = "study_id", nullable = false)
     private String studyId;
 
     @Column(name = "person_key")
