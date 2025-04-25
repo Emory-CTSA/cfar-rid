@@ -1,9 +1,12 @@
 package edu.ctsa.emory.cfar_rid.repository;
 
 import edu.ctsa.emory.cfar_rid.entity.CfarLymphocytesAll;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(path = "cfar-lymphocytes-all")
-public interface CfarLymphocytesAllRepository extends CrudRepository<CfarLymphocytesAll, Long> {
+/**
+ * Repository interface for CFAR Lymphocytes All data.
+ */
+@Repository
+public interface CfarLymphocytesAllRepository extends JpaRepository<CfarLymphocytesAll, String> {
 }

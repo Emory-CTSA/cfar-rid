@@ -1,21 +1,25 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
-import javax.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Entity representing lymphocyte lab results from CFAR dataset.
+ */
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ToString
 @Table(name = "cfar_lymphocytes_all", schema = "cfar_rid_hiv")
 public class CfarLymphocytesAll {
 
     @Id
-    @Column(name = "STUDY_ID")
+    @Column(name = "STUDY_ID", nullable = false)
     private String studyId;
 
     @Column(name = "PERSON_KEY")
