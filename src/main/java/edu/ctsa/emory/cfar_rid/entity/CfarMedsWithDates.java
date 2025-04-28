@@ -1,21 +1,25 @@
 package edu.ctsa.emory.cfar_rid.entity;
 
-import javax.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Entity representing medication records with start and end dates from CFAR dataset.
+ */
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ToString
 @Table(name = "cfar_meds_with_dates", schema = "cfar_rid_hiv")
 public class CfarMedsWithDates {
 
     @Id
-    @Column(name = "STUDY_ID")
+    @Column(name = "STUDY_ID", nullable = false)
     private String studyId;
 
     @Column(name = "PERSON_KEY")
@@ -24,12 +28,12 @@ public class CfarMedsWithDates {
     @Column(name = "DRUG_DESCRIPTION")
     private String drugDescription;
 
-    @Column(name = "START_DATE")
     @Temporal(TemporalType.DATE)
+    @Column(name = "START_DATE")
     private Date startDate;
 
-    @Column(name = "END_DATE")
     @Temporal(TemporalType.DATE)
+    @Column(name = "END_DATE")
     private Date endDate;
 
     @Column(name = "RXNORM")

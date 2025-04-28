@@ -1,9 +1,12 @@
 package edu.ctsa.emory.cfar_rid.repository;
 
 import edu.ctsa.emory.cfar_rid.entity.CfarMedsWithDates;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(path = "cfar-meds-with-dates")
-public interface CfarMedsWithDatesRepository extends CrudRepository<CfarMedsWithDates, String> {
+/**
+ * Repository interface for CFAR Meds With Dates entity.
+ */
+@Repository
+public interface CfarMedsWithDatesRepository extends JpaRepository<CfarMedsWithDates, String> {
 }
