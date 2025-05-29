@@ -4,20 +4,28 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**
+ * Security configuration using WebSecurityConfigurerAdapter (pre-Spring 5.7).
+ */
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    /**
+     * Configure HTTP security rules.
+     *
+     * @param http HttpSecurity object
+     * @throws Exception in case of configuration error
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .cors() // If you're using CORS settings
+                .cors() // Enable CORS
                 .and()
-                .csrf().disable() // Disable CSRF protection for simplicity in non-production
+                .csrf().disable() // ⚠️ Disable CSRF only if you're not using session-based login
                 .authorizeRequests()
-                .antMatchers("/api/**").permitAll() // Allow all accesses to API endpoints
-                .anyRequest().authenticated() // All other requests need authentication
+                .antMatchers("/api/**").permitAll() // Public endpoints
+                .anyRequest().authenticated()       // Secure all other endpoints
                 .and()
-                .httpBasic(); // Basic authentication, you might want to use a different or more secure method in production
+                .httpBasic(); // ⚠️ Replace with JWT/OAuth2 in production if possible
     }
 }
-
